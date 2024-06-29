@@ -1,4 +1,3 @@
-// src/pages/Home.js
 import React from "react";
 
 const dummyProducts = [
@@ -148,7 +147,7 @@ const Home = () => {
   return (
     <div className='container mx-auto mt-4 px-4'>
       <h1 className='text-4xl font-bold text-center mb-6 text-blue-600'>
-        Welcome to Our Store!
+        Welcome to EasyBuy!
       </h1>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {dummyProducts.map((product) => (

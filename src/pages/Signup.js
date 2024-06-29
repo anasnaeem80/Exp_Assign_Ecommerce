@@ -1,4 +1,3 @@
-// src/pages/Signup.js
 import React from "react";
 import { Container, Box, TextField, Button, Typography } from "@mui/material";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";

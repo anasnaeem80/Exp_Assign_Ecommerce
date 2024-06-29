@@ -1,4 +1,3 @@
-// src/pages/ProductUpload.js
 import React, { useState } from "react";
 import { Container, Box, TextField, Button, Typography } from "@mui/material";
 import UploadIcon from "@mui/icons-material/Upload";
@@ -10,7 +9,6 @@ const ProductUpload = () => {
 
   const handleUpload = (e) => {
     e.preventDefault();
-    // Handle product upload logic here
   };
 
   return (
