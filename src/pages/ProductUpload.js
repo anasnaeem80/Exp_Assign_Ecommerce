@@ -1,14 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Container, Box, TextField, Button, Typography } from "@mui/material";
 import UploadIcon from "@mui/icons-material/Upload";
+import { ProductContext } from "../App";
 
 const ProductUpload = () => {
+  const { addProduct } = useContext(ProductContext);
   const [productName, setProductName] = useState("");
   const [productDescription, setProductDescription] = useState("");
   const [productPrice, setProductPrice] = useState("");
 
   const handleUpload = (e) => {
     e.preventDefault();
+    addProduct({
+      name: productName,
+      description: productDescription,
+      price: productPrice,
+    });
+    setProductName("");
+    setProductDescription("");
+    setProductPrice("");
   };
 
   return (
@@ -25,7 +35,7 @@ const ProductUpload = () => {
         <Typography variant='h5' component='h1' sx={{ mb: 2 }}>
           Upload Product
         </Typography>
-        <Box component='form' sx={{ width: "100%" }}>
+        <Box component='form' sx={{ width: "100%" }} onSubmit={handleUpload}>
           <TextField
             label='Product Name'
             fullWidth
